@@ -4,7 +4,7 @@ body {
 }
 .block-container {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 5px 0;
   max-width: calc(100vh - 100px);
 }
@@ -82,6 +82,18 @@ body {
   background-color: gray;
   border-color: gray;
   color: gray;
+}
+
+.brown {
+  background-color: brown;
+  border-color: brown;
+  color: brown;
+}
+
+.cyan {
+  background-color: cyan;
+  border-color: cyan;
+  color: cyan;
 }
 
 .wrong {
