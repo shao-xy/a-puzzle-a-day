@@ -25,10 +25,10 @@ const pieces = [
   [[[0, 2], [1, 0], [1, 1], [1, 2], [2, 0]]],          // green
   [[[0, 0], [0, 1], [0, 2], [1, 0], [2, 0]]],          // yellow
   [[[0, 0], [1, 0], [1, 1], [1, 2], [2, 0]]],          // red
-  [[[0, 0], [0, 1], [0, 2], [0, 3]]],                  // blue
-  [[[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]],          // pink
-  [[[0, 3], [1, 0], [1, 1], [1, 2], [1, 3]]],          // orange
-  [[[0, 0], [0, 2], [1, 0], [1, 1], [1, 2]]],          // gray
+  [[[0, 0], [0, 1], [1, 0], [1, 1], [2, 0]]],          // blue
+  [[[0, 3], [1, 0], [1, 1], [1, 2], [1, 3]]],          // pink
+  [[[0, 0], [0, 2], [1, 0], [1, 1], [1, 2]]],          // orange
+  [[[0, 0], [0, 1], [0, 2], [0, 3]]],                  // gray
   [[[0, 0], [0, 1], [0, 2], [1, 2]]],                  // brown
   [[[0, 0], [0, 1], [1, 1], [1, 2]]],                  // cyan
 ];
@@ -210,7 +210,7 @@ function forwardCut(selections, nextIndex) {
   }
 
   // if the any section's length is smaller than 4 (we have smaller blocks), return false
-  if (sections.some(sec => sec.length < 4)) {
+  if (sections.some(sec => (sec.length < 4 || sec.length > 5 && sec.length < 8 || sec.length == 11 || sec.length == 16))) {
     return false;
   }
 
